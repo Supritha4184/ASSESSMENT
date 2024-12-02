@@ -1,0 +1,62 @@
+ CRUD OPERATION:
+=================
+1.CREATE:
+=========
+->CREATE SQL TABLE :
+=====================
+
+CREATE TABLE REGISTRATION
+    -> (
+    -> ID BIGINT PRIMARY KEY NOT NULL,
+    -> NAME VARCHAR(20) NOT NULL,
+    -> EMAIL VARCHAR(20) NOT NULL,
+    -> DOB DATE
+    -> );
+
+-> INSERT VALUES:
+=================
+INSERT INTO REGISTRATION VALUES(10,'SUPRITHA','supritha@gmail.com','2002-09-17'),(20,'MEGHA','megha@gmail.com','2002-09-18');
+
+2.READ:
+=======
+ SELECT*FROM REGISTRATION;
++----+----------+--------------------+------------+
+| ID | NAME     | EMAIL              | DOB        |
++----+----------+--------------------+------------+
+| 10 | SUPRITHA | supritha@gmail.com | 2002-09-17 |
+| 20 | MEGHA    | megha@gmail.com    | 2002-09-18 |
++----+----------+--------------------+------------+
+
+3.UPDATE:
+=======
+UPDATE REGISTRATION
+    -> SET NAME='MEGHANA'
+    -> WHERE ID=20;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+ SELECT*FROM REGISTRATION;
++----+----------+--------------------+------------+
+| ID | NAME     | EMAIL              | DOB        |
++----+----------+--------------------+------------+
+| 10 | SUPRITHA | supritha@gmail.com | 2002-09-17 |
+| 20 | MEGHANA  | megha@gmail.com    | 2002-09-18 |
++----+----------+--------------------+------------+
+2 rows in set (0.00 sec)
+
+
+4.DELETE:
+=========
+DELETE FROM REGISTRATION
+    -> WHERE ID=20;
+Query OK, 1 row affected (0.01 sec)
+
+ SELECT*FROM REGISTRATION;
++----+----------+--------------------+------------+
+| ID | NAME     | EMAIL              | DOB        |
++----+----------+--------------------+------------+
+| 10 | SUPRITHA | supritha@gmail.com | 2002-09-17 |
++----+----------+--------------------+------------+
+1 row in set (0.00 sec)
+
+
